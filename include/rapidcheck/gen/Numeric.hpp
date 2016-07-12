@@ -5,6 +5,7 @@
 #include "rapidcheck/shrink/Shrink.h"
 #include "rapidcheck/gen/Transform.h"
 #include "rapidcheck/gen/detail/ScaleInteger.h"
+#include "rapidcheck/fix.h"
 
 namespace rc {
 namespace gen {

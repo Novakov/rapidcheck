@@ -4,6 +4,7 @@
 #include <algorithm>
 
 #include "rapidcheck/Show.h"
+#include "rapidcheck/fix.h"
 
 namespace rc {
 namespace detail {

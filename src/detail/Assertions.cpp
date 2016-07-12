@@ -1,4 +1,5 @@
 #include "rapidcheck/Assertions.h"
+#include "rapidcheck/fix.h"
 
 namespace rc {
 namespace detail {

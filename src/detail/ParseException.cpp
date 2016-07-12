@@ -1,4 +1,5 @@
 #include "ParseException.h"
+#include "rapidcheck/fix.h"
 
 namespace rc {
 namespace detail {

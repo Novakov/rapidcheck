@@ -5,6 +5,7 @@
 #include "rapidcheck/gen/detail/ShrinkValueIterator.h"
 #include "rapidcheck/shrink/Shrink.h"
 #include "rapidcheck/shrinkable/Create.h"
+#include "rapidcheck/fix.h"
 
 namespace rc {
 namespace gen {

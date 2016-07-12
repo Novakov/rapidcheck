@@ -9,6 +9,7 @@
 #include "ParseException.h"
 #include "StringSerialization.h"
 #include "rapidcheck/detail/Platform.h"
+#include "rapidcheck/fix.h"
 
 namespace rc {
 namespace detail {
