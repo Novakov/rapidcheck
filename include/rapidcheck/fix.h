@@ -1,3 +1,6 @@
+#ifndef RAPIDCHECK_FIX_H
+#define RAPIDCHECK_FIX_H
+
 #include <string>
 #include <sstream>
 
@@ -11,3 +14,5 @@ namespace std
         return TempStream.str();
     }      
 }
+
+#endif
