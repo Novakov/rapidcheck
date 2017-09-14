@@ -19,6 +19,12 @@ public:
   virtual ~IAnyImpl() = default;
 };
 
+class TypeInfoWrapper: public std::type_info
+{
+	public:
+			TypeInfoWrapper() : std::type_info("wrapper"){}
+};
+
 template <typename T>
 class Any::AnyImpl : public Any::IAnyImpl {
 public:
@@ -32,10 +38,11 @@ public:
 
   void showValue(std::ostream &os) const override { show(m_value, os); }
 
-  const std::type_info &typeInfo() const override { return typeid(T); }
+  const std::type_info &typeInfo() const override { return _wrapper; }
 
 private:
   T m_value;
+  TypeInfoWrapper _wrapper;
 };
 
 /// Constructs a new `Any` with the given value.
@@ -49,14 +56,14 @@ Any Any::of(T &&value) {
 template <typename T>
 const T &Any::get() const {
   assert(m_impl);
-  assert(m_impl->typeInfo() == typeid(T));
+  //assert(m_impl->typeInfo() == typeid(T));
   return *static_cast<T *>(m_impl->get());
 }
 
 template <typename T>
 T &Any::get() {
   assert(m_impl);
-  assert(m_impl->typeInfo() == typeid(T));
+  //assert(m_impl->typeInfo() == typeid(T));
   return *static_cast<T *>(m_impl->get());
 }
 
